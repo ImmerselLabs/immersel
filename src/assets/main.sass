@@ -1,0 +1,41 @@
+@use './base.sass'
+
+#app
+	max-width: 95vw
+	margin: 0 auto
+	padding: 2rem
+
+@layer base
+	.absolute-center
+		@apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+
+.cstm-input
+	width: 100%
+	height: auto
+	padding: 9px 17px
+	border-radius: 8px
+	border: 1px solid transparent
+	outline: 1.2px solid transparent
+	font-size: 1rem
+	background: rgba(var(--accent-rgb), 0.1)
+	&:focus, input[type='text']:focus
+		outline-color: var(--accent)
+
+button.btn
+	padding: 0 23px
+	font-weight: 600
+	letter-spacing: 1px
+	line-height: 2.7rem
+	border-radius: 8px
+	&.pill
+		border-radius: 100px
+	&:hover,&:focus
+		opacity: 0.85
+
+.circle-gradient
+	background: hsla(252, 40%, 29%, 1)
+	background: linear-gradient(45deg, hsla(252, 40%, 29%, 1) 0%, hsla(270, 77%, 71%, 1) 100%)
+	background: -moz-linear-gradient(45deg, hsla(252, 40%, 29%, 1) 0%, hsla(270, 77%, 71%, 1) 100%)
+	background: -webkit-linear-gradient(45deg, hsla(252, 40%, 29%, 1) 0%, hsla(270, 77%, 71%, 1) 100%)
+
+// *-accent
